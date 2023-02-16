@@ -1,0 +1,224 @@
+@import "./vendors/reset";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$color-blue : #124660;
+$color-vert-fonce: #1B9476;
+$color-vert-clair: #8BD59E;
+$color-vert-blanc: #C7DBC2;
+$color-beige: #F4EBD6;
+
+$total-lines: 62;
+$left-offset: 1.25vw;
+$clip-height: 3vw;
+$line-height: $clip-height;
+
+body{
+    background-color:$color-beige;
+    color: $color-blue;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    z-index: 2;
+    position: relative;
+    height: 100px;
+    background-color: $color-vert-fonce;
+    color: $color-beige;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 700;
+    a{
+        text-decoration: none;
+        color: $color-beige;
+        &:hover{
+            color: $color-vert-clair;
+            transition: color 0.3s ease;
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: $color-vert-fonce;
+    color: $color-beige;
+    font-weight: 600;
+    text-align: center;
+}
+.Words {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+    font-weight: 900;
+    padding-bottom: 400px;
+    margin-top: -200px;
+    text-transform: uppercase;
+    transform: translate3d(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+      .Words-line {
+        height: $clip-height;
+        overflow: hidden;
+        position: relative;
+        p {
+            border: $color-vert-blanc 5px solid;
+            height: $clip-height;
+            line-height: $line-height;
+            padding: 0 10px;
+            transition: all .4s ease-in-out;
+            transform: translate3d(0, 0, 0);
+            vertical-align: top;
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover{
+                transition: all ease-in-out 0.5s;
+                transform: translate3d(0, -(10px), 0);
+            }
+          }
+        &:nth-child(odd) {
+          transform: skew(60deg, -30deg) scaleY(.66667);
+          background-color:$color-vert-blanc;
+        }
+        &:nth-child(even) {
+          transform: skew(0deg, -30deg) scaleY(1.33333);
+          color: $color-vert-fonce;
+        }
+        @for $i from 1 through $total-lines+1 {
+          &:nth-child(#{$i}) {
+            left: $left-offset * $i;
+          }
+        }
+      }
+  }
+  
+h1{
+    z-index: 2;
+    font-weight: 900;
+    font-size: 7.5vw;
+}
+
+h2, h3{
+    z-index: 2;
+    font-weight: 700;
+    font-size: 3vw;
+    color: $color-vert-fonce;
+}
+
+h3{
+    z-index: 2;
+    color: $color-vert-clair;
+}
+
+h4{
+    z-index: 2;
+    font-size: 2.15vw;
+    font-weight: 600;
+}
+ 
+#materialisme{
+    width: clamp(375px, 80%, 800px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    text-align: center;
+    padding-block: 5vw;
+    img{
+        width: 80%;
+        border: $color-vert-blanc 2.5vw solid;
+    }
+}
+.echec{
+    z-index: 2;
+    width: clamp(375px, 80%, 800px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    text-align: center;
+    padding-block: 5vw;
+}
+.echec_words_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    .echec_words, .echec_words_bis, .echec_words_bis_bis{
+        clip-path: polygon(22% 0, 77% 0, 77% 33%, 55% 60%, 60% 83%, 80% 85%, 80% 100%, 21% 100%, 21% 85%, 41% 83%, 45% 60%, 23% 33%);
+        background-color: $color-blue;
+        color: $color-vert-blanc;
+        width: 60vw;
+        aspect-ratio: 1;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 2vw;
+        line-height: 2;
+        text-align: center;
+    }
+    .echec_words_bis, .echec_words_bis_bis{
+        clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 0% 50%);
+        width: 20vw;
+        height: 20vw;
+        font-size: 0.8em;
+        line-height: 1;
+        text-align: left;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-top: 5vw;
+        position: absolute;
+        left: 20vw;
+    }
+    .echec_words_bis_bis{
+        clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 100% 47%);
+        text-align: right;
+        right: 20vw;
+        left: inherit;
+    }
+}
+
+#chartdiv {
+    width:50%;
+    height: 500px;
+    padding-bottom: 5vw;
+  }
+
+  .home{
+    height: 100vh;
+    width: 100%;
+    background-color: $color-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7.5vw;
+    h1{
+        color: $color-beige;
+    }
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        a{
+            text-decoration: none;
+            color: $color-vert-blanc;
+            font-weight: 900;
+            font-size: 4vw;
+            &:hover{
+                color: $color-vert-fonce;
+                transition: color 0.3s ease;
+            }
+        }
+    }
+    
+  }

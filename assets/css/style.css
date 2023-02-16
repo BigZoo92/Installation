@@ -1,0 +1,538 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #F4EBD6;
+  color: #124660;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  height: 100px;
+  background-color: #1B9476;
+  color: #F4EBD6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2vw;
+  font-weight: 700;
+}
+header a {
+  text-decoration: none;
+  color: #F4EBD6;
+}
+header a:hover {
+  color: #8BD59E;
+  transition: color 0.3s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #1B9476;
+  color: #F4EBD6;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Words {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 2vw;
+  font-weight: 900;
+  padding-bottom: 400px;
+  margin-top: -200px;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+.Words .Words-line {
+  height: 3vw;
+  overflow: hidden;
+  position: relative;
+}
+.Words .Words-line p {
+  border: #C7DBC2 5px solid;
+  height: 3vw;
+  line-height: 3vw;
+  padding: 0 10px;
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  vertical-align: top;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.Words .Words-line p:hover {
+  transition: all ease-in-out 0.5s;
+  transform: translate3d(0, -10px, 0);
+}
+.Words .Words-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.66667);
+  background-color: #C7DBC2;
+}
+.Words .Words-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+  color: #1B9476;
+}
+.Words .Words-line:nth-child(1) {
+  left: 1.25vw;
+}
+.Words .Words-line:nth-child(2) {
+  left: 2.5vw;
+}
+.Words .Words-line:nth-child(3) {
+  left: 3.75vw;
+}
+.Words .Words-line:nth-child(4) {
+  left: 5vw;
+}
+.Words .Words-line:nth-child(5) {
+  left: 6.25vw;
+}
+.Words .Words-line:nth-child(6) {
+  left: 7.5vw;
+}
+.Words .Words-line:nth-child(7) {
+  left: 8.75vw;
+}
+.Words .Words-line:nth-child(8) {
+  left: 10vw;
+}
+.Words .Words-line:nth-child(9) {
+  left: 11.25vw;
+}
+.Words .Words-line:nth-child(10) {
+  left: 12.5vw;
+}
+.Words .Words-line:nth-child(11) {
+  left: 13.75vw;
+}
+.Words .Words-line:nth-child(12) {
+  left: 15vw;
+}
+.Words .Words-line:nth-child(13) {
+  left: 16.25vw;
+}
+.Words .Words-line:nth-child(14) {
+  left: 17.5vw;
+}
+.Words .Words-line:nth-child(15) {
+  left: 18.75vw;
+}
+.Words .Words-line:nth-child(16) {
+  left: 20vw;
+}
+.Words .Words-line:nth-child(17) {
+  left: 21.25vw;
+}
+.Words .Words-line:nth-child(18) {
+  left: 22.5vw;
+}
+.Words .Words-line:nth-child(19) {
+  left: 23.75vw;
+}
+.Words .Words-line:nth-child(20) {
+  left: 25vw;
+}
+.Words .Words-line:nth-child(21) {
+  left: 26.25vw;
+}
+.Words .Words-line:nth-child(22) {
+  left: 27.5vw;
+}
+.Words .Words-line:nth-child(23) {
+  left: 28.75vw;
+}
+.Words .Words-line:nth-child(24) {
+  left: 30vw;
+}
+.Words .Words-line:nth-child(25) {
+  left: 31.25vw;
+}
+.Words .Words-line:nth-child(26) {
+  left: 32.5vw;
+}
+.Words .Words-line:nth-child(27) {
+  left: 33.75vw;
+}
+.Words .Words-line:nth-child(28) {
+  left: 35vw;
+}
+.Words .Words-line:nth-child(29) {
+  left: 36.25vw;
+}
+.Words .Words-line:nth-child(30) {
+  left: 37.5vw;
+}
+.Words .Words-line:nth-child(31) {
+  left: 38.75vw;
+}
+.Words .Words-line:nth-child(32) {
+  left: 40vw;
+}
+.Words .Words-line:nth-child(33) {
+  left: 41.25vw;
+}
+.Words .Words-line:nth-child(34) {
+  left: 42.5vw;
+}
+.Words .Words-line:nth-child(35) {
+  left: 43.75vw;
+}
+.Words .Words-line:nth-child(36) {
+  left: 45vw;
+}
+.Words .Words-line:nth-child(37) {
+  left: 46.25vw;
+}
+.Words .Words-line:nth-child(38) {
+  left: 47.5vw;
+}
+.Words .Words-line:nth-child(39) {
+  left: 48.75vw;
+}
+.Words .Words-line:nth-child(40) {
+  left: 50vw;
+}
+.Words .Words-line:nth-child(41) {
+  left: 51.25vw;
+}
+.Words .Words-line:nth-child(42) {
+  left: 52.5vw;
+}
+.Words .Words-line:nth-child(43) {
+  left: 53.75vw;
+}
+.Words .Words-line:nth-child(44) {
+  left: 55vw;
+}
+.Words .Words-line:nth-child(45) {
+  left: 56.25vw;
+}
+.Words .Words-line:nth-child(46) {
+  left: 57.5vw;
+}
+.Words .Words-line:nth-child(47) {
+  left: 58.75vw;
+}
+.Words .Words-line:nth-child(48) {
+  left: 60vw;
+}
+.Words .Words-line:nth-child(49) {
+  left: 61.25vw;
+}
+.Words .Words-line:nth-child(50) {
+  left: 62.5vw;
+}
+.Words .Words-line:nth-child(51) {
+  left: 63.75vw;
+}
+.Words .Words-line:nth-child(52) {
+  left: 65vw;
+}
+.Words .Words-line:nth-child(53) {
+  left: 66.25vw;
+}
+.Words .Words-line:nth-child(54) {
+  left: 67.5vw;
+}
+.Words .Words-line:nth-child(55) {
+  left: 68.75vw;
+}
+.Words .Words-line:nth-child(56) {
+  left: 70vw;
+}
+.Words .Words-line:nth-child(57) {
+  left: 71.25vw;
+}
+.Words .Words-line:nth-child(58) {
+  left: 72.5vw;
+}
+.Words .Words-line:nth-child(59) {
+  left: 73.75vw;
+}
+.Words .Words-line:nth-child(60) {
+  left: 75vw;
+}
+.Words .Words-line:nth-child(61) {
+  left: 76.25vw;
+}
+.Words .Words-line:nth-child(62) {
+  left: 77.5vw;
+}
+.Words .Words-line:nth-child(63) {
+  left: 78.75vw;
+}
+
+h1 {
+  z-index: 2;
+  font-weight: 900;
+  font-size: 7.5vw;
+}
+
+h2, h3 {
+  z-index: 2;
+  font-weight: 700;
+  font-size: 3vw;
+  color: #1B9476;
+}
+
+h3 {
+  z-index: 2;
+  color: #8BD59E;
+}
+
+h4 {
+  z-index: 2;
+  font-size: 2.15vw;
+  font-weight: 600;
+}
+
+#materialisme {
+  width: clamp(375px, 80%, 800px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  text-align: center;
+  padding-block: 5vw;
+}
+#materialisme img {
+  width: 80%;
+  border: #C7DBC2 2.5vw solid;
+}
+
+.echec {
+  z-index: 2;
+  width: clamp(375px, 80%, 800px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  text-align: center;
+  padding-block: 5vw;
+}
+
+.echec_words_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.echec_words_wrap .echec_words, .echec_words_wrap .echec_words_bis, .echec_words_wrap .echec_words_bis_bis {
+  clip-path: polygon(22% 0, 77% 0, 77% 33%, 55% 60%, 60% 83%, 80% 85%, 80% 100%, 21% 100%, 21% 85%, 41% 83%, 45% 60%, 23% 33%);
+  background-color: #124660;
+  color: #C7DBC2;
+  width: 60vw;
+  aspect-ratio: 1;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 2vw;
+  line-height: 2;
+  text-align: center;
+}
+.echec_words_wrap .echec_words_bis, .echec_words_wrap .echec_words_bis_bis {
+  clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 0% 50%);
+  width: 20vw;
+  height: 20vw;
+  font-size: 0.8em;
+  line-height: 1;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-top: 5vw;
+  position: absolute;
+  left: 20vw;
+}
+.echec_words_wrap .echec_words_bis_bis {
+  clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 100% 47%);
+  text-align: right;
+  right: 20vw;
+  left: inherit;
+}
+
+#chartdiv {
+  width: 50%;
+  height: 500px;
+  padding-bottom: 5vw;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background-color: #124660;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7.5vw;
+}
+.home h1 {
+  color: #F4EBD6;
+}
+.home nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.home nav a {
+  text-decoration: none;
+  color: #C7DBC2;
+  font-weight: 900;
+  font-size: 4vw;
+}
+.home nav a:hover {
+  color: #1B9476;
+  transition: color 0.3s ease;
+}
+
+/*# sourceMappingURL=style.css.map */
