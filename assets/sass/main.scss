@@ -10,7 +10,9 @@ $total-lines: 62;
 $left-offset: 1.25vw;
 $clip-height: 3vw;
 $line-height: $clip-height;
-
+html{
+    overflow-x: hidden;
+}
 body{
     background-color:$color-beige;
     color: $color-blue;
